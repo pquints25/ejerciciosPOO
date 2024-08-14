@@ -11,7 +11,7 @@ export default class Producto {
         this.#precioUnitario = precioUnitario;
         this.#stock = stock;
         this.#categoria = categoria;
-        this.#categoria.agregarProducto(this); // Asociar producto a la categoría
+        this.#categoria.agregarProducto(this);
     }
 
     get idProducto() {
