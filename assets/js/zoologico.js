@@ -1,8 +1,46 @@
-let zoologico = new Zoologico
+export default class Zoologico{
+    #idZoologico;
+    #nombreZoologico;
+    #animales;
 
-let tigre = new Tigre('Miguel', 5, 300);
-let leon = new Leon ('Jaime', 4, 250);
-let gaviota = new Gaviota ('Claudia', 2, 10);
-let vaca = new Vaca ('Micaela', 6, 300);
-let jirafa = new Jirafa ('Rodrigo', 9, 200)
+    constructor(idZoologico, nombreZoologico, animales){
+        this.#idZoologico = idZoologico;
+        this.#nombreZoologico = nombreZoologico;
+        this.#animales = animales;
+    }
+
+    get idZoologico() {
+    return this.#idZoologico;
+    }
+    
+    set idZoologico(idZoologico) {
+    this.#idZoologico = idZoologico;
+    }
+
+    get nombreZoologico() {
+    return this.#nombreZoologico;
+    }
+    
+    set nombreZoologico(nombreZoologico) {
+    this.#nombreZoologico = nombreZoologico;
+    }
+
+agregarAnimal(animal){
+    this.#animales.push(animal);
+}
+
+quitarAnimales (idAnimal){
+    this.#animales = this.#animales.filter(animal => animal.idAnimal !== idAnimal);
+}
+
+listaAnimales(){
+    return this.#animales;
+}
+
+buscarAnimal(idAnimal){
+    return this.#animales.find(animal => animal.idAnimal === idAnimal);
+}
+}
+
+
 

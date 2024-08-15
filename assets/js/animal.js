@@ -1,45 +1,44 @@
 export default class Animal{
-    #nombre
-    #edad
-    #peso
+    #idAnimal;
+    #descripcion;
 
-    constructor(nombre, edad, peso){
-        this.#nombre = nombre;
-        this.#edad = edad;
-        this.#peso = peso;
+constructor(idAnimal, descripcion){
+    this.#idAnimal
+    this.#descripcion
+}
+    get idAnimal() {
+    return this.#idAnimal;
     }
     
-    get nombre() {
-        return this.#nombre;
-    }
-    
-    set nombre(nombre) {
-        this.#nombre = nombre;
+    set idAnimal(idAnimal) {
+    this.#idAnimal = idAnimal;
     }
 
-    get edad() {
-        return this.#edad;
+
+    get descripcion() {
+    return this.#descripcion;
     }
     
-    set edad(edad) {
-        this.#edad = edad;
-    }
-    
-    get peso() {
-        return this.#peso;
-    }
-    
-    set peso(peso) {
-        this.#peso = peso;
+    set descipcion(descripcion) {
+    this.#descripcion = descripcion;
     }
 
-    comer(){
-        console.log(`${this.#nombre} esta comiendo`);
-        
+    desplazarse(){
+        return 'desplaza';
     }
 
-    mover(){
-        console.log(`${this.#nombre} esta moviendo`);
-        
+    alimentarse(){
+        return 'alimenta';
     }
+
+
+
+
+
+
+
+
+
+
+
 }
